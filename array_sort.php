@@ -6,13 +6,15 @@ $array = [1, 30, 14, 23, 33, 40, 120];
 
 $swap = 0;
 
-for($i = 1; $i <= sizeof($array); i++) {
-  if($array[$i] > $array[$i + 1]) {
+for($i = 1; $i < sizeof($array); $i++) {
+  if($array[$i] >= $array[$i + 1]) {
     $swap = $array[$i];
     $array[$i] = $array[$i + 1];
     $array[$i + 1] = $swap;
+  }else {
+    break;
   }
-
+}
 
 
 
